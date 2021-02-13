@@ -9,7 +9,7 @@ const forecast = (lat, lon, callback) => {
       if (callback)
         callback(
           undefined,
-          `It is currently ${response.body.current.temperature} degrees out. There is ${response.body.current.precip}% chance of rain.`
+          `It is currently ${response.body.current.temperature} degrees out. There is ${response.body.current.precip}% chance of rain. Wind speed is ${response.body.current.wind_speed}`
         );
     }
   });
