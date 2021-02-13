@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
+const port = process.env.PORT || 1111;
 
 //define for express config
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -61,6 +62,6 @@ app.get('*', (req, res) => {
   res.render('404', { title: '404', name: 'Niki' });
 });
 
-app.listen(1111, () => {
+app.listen(port, () => {
   console.log('started');
 });
